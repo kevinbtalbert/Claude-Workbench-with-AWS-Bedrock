@@ -1,0 +1,49 @@
+# Cloudera Blueprint catalog metadata
+# Populate fields used by the master blueprint website and internal catalog.
+
+# --- Identity ---
+name: "Claude Code with AWS Bedrock"
+slug: "claude-code-aws-bedrock"
+description: "Run Claude Code coding agents in Cloudera AI Workbench against Amazon Bedrock foundation models via LiteLLM and the Bedrock Invoke API."
+reprise_link: ""
+
+# --- Classification (website filters) ---
+catalog_classification:
+  - Developer Example
+launchable: true
+lifecycle_status: Active
+
+# --- Industry & alignment ---
+industry: General
+industry_alignment: "Horizontal"
+target_vertical: ""
+
+# --- Tags (website search & browse) ---
+tags:
+  - claude-code
+  - aws-bedrock
+  - bedrock
+  - coding-agent
+  - agents
+  - litellm
+
+# --- Relationships ---
+product_mapping:
+  - Cloudera Machine Learning
+  - Amazon Bedrock
+model_dependencies: []
+
+# --- Provenance ---
+publisher: cloudera
+source: Internal
+
+# --- Repository & assets ---
+public_github_link: "https://github.com/kevinbtalbert/Claude-Workbench-with-AWS-Bedrock"
+
+# --- Ownership ---
+maintainer_name: "Kevin Talbert"
+
+# --- Dates ---
+date_created: "2026-09-11"
+date_updated: "2026-09-11"
+published_date: "2026-09-11"
