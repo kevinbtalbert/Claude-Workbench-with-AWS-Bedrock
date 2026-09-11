@@ -34,6 +34,7 @@ claude  →  LiteLLM (localhost:4000)  →  AWS Bedrock
 
 ## Key Features
 
+- **Pre-built image** supported — `docker.io/kevintalbert/claudeworkbenchwithawsbedrock:latest` (no Docker build required)
 - **Custom runtime** with Claude Code, LiteLLM, and agent-friendly tooling preinstalled
 - **Model from env** — set `BEDROCK_MODEL` to any Bedrock model id you have access to
 - **12-hour Bedrock bearer tokens** — auto-minted from AWS credentials, or pasted from the Bedrock console
@@ -56,18 +57,22 @@ In the AWS console:
 
 ### 2. Register the workbench runtime
 
-**Option A:** Build and register from this repo:
+**Option A (recommended):** Use the **pre-built runtime image** — no Docker build required. In **Admin → Runtime Catalog → Add Runtime**, paste:
+
+```text
+docker.io/kevintalbert/claudeworkbenchwithawsbedrock:latest
+```
+
+When registered, the runtime shows **Edition: Claude Code with AWS Bedrock** and a green status checkmark.
+
+Create a project with that runtime and start a session. **No GPU required on the workbench pod**—inference runs on Bedrock.
+
+**Option B:** Build and register from this repo:
 
 ```bash
 docker build --pull --rm -f Dockerfile -t <your-registry>/claudeworkbench-bedrock:1.0.0 .
 # push to your registry, then Add Runtime in the catalog
 ```
-
-In **Admin → Runtime Catalog → Add Runtime**, paste your image URI.
-
-**Option B:** Use a pre-built image if you have published one to your registry.
-
-Create a project with that runtime and start a session. **No GPU required on the workbench pod**—inference runs on Bedrock.
 
 ### 3. Set environment variables
 
