@@ -53,7 +53,7 @@ In the AWS console:
 4. Note the **model id** for `BEDROCK_MODEL`:
    - **Console:** [Amazon Bedrock → Model catalog](https://console.aws.amazon.com/bedrock/home#/model-catalog) — browse all models in your region
    - **Full reference list:** [Supported foundation models (model IDs)](https://docs.aws.amazon.com/bedrock/latest/userguide/model-ids.html)
-   - Example: `us.anthropic.claude-sonnet-4-6` or `anthropic.claude-3-5-sonnet-20241022-v2:0`
+   - Example: `us.anthropic.claude-sonnet-5-5`
 
 ### 2. Register the workbench runtime
 
@@ -217,7 +217,7 @@ To use native Bedrock instead, set project environment variables and skip the Li
 | `AWS_ACCESS_KEY_ID` | IAM access key |
 | `AWS_SECRET_ACCESS_KEY` | IAM secret key |
 | `AWS_REGION` | Bedrock region |
-| `ANTHROPIC_DEFAULT_SONNET_MODEL` | Bedrock model id (e.g. `us.anthropic.claude-sonnet-4-6`) |
+| `ANTHROPIC_DEFAULT_SONNET_MODEL` | Bedrock model id (e.g. `us.anthropic.claude-sonnet-5-5`) |
 | `ANTHROPIC_DEFAULT_OPUS_MODEL` | Same or a different Bedrock model id |
 | `ANTHROPIC_DEFAULT_HAIKU_MODEL` | Same or a different Bedrock model id |
 
